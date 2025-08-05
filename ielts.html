@@ -858,5 +858,27 @@
     }
   });
 </script>
+<!--How the IELTS Test Works Buttons-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".tab");
+  const cards = document.querySelectorAll(".card");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const targetId = tab.getAttribute("data-tab");
+
+      // Remove 'active' from all tabs and all cards
+      tabs.forEach(t => t.classList.remove("active"));
+      cards.forEach(c => c.classList.remove("active"));
+
+      // Add 'active' to clicked tab and corresponding card
+      tab.classList.add("active");
+      document.getElementById(targetId).classList.add("active");
+    });
+  });
+});
+
+</script>
 
 </html>

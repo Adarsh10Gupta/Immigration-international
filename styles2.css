@@ -180,14 +180,15 @@
       padding: 80px 5%;
       background-color: #D70000;
       margin-bottom: 0px;
+          font-family: 'Outfit', sans-serif;
     }
     .left-content {
       flex: 1;
       min-width: 300px;
+      margin-top: 20px;
     }
     .left-content h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 55px;
+      font-size: 4rem;
       font-weight: 600;
       line-height: 1.2;
       margin-bottom: 20px;
@@ -310,8 +311,8 @@
       color: black;
     }
     .about-ielts h2 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 40px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 3rem;
       font-weight: 600;
     }
     .about-ielts h2 span {
@@ -322,6 +323,7 @@
       border-radius: 16px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
       padding: 40px;
+      font-family: 'Outfit', sans-serif;
       margin-top: 40px;
     }
     .about-box p{
@@ -440,8 +442,8 @@
       color: black;
     }
     .purpose-section h2 {
-      font-size: 40px;
-      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      font-family: 'Outfit', sans-serif;
       font-weight: 600;
     }
     .purpose-section h2 span {
@@ -452,7 +454,11 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      font-family: 'Outfit', sans-serif;
       margin-top: 40px;
+    }
+    .purpose-section p{
+      font-family: 'Outfit', sans-serif;
     }
     .purpose-box {
       background: white;
@@ -497,6 +503,7 @@
       padding: 30px;
       border-radius: 16px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      font-family: 'Outfit', sans-serif;
     }
     .purpose-stats div {
       text-align: center;
@@ -516,10 +523,12 @@
     .types-section{
       text-align: center;
       color: black;
+      font-family: 'Outfit', sans-serif;
+      margin-top: 20px;
     }
     .types-section h2{
-        font-size: 40px;
-      font-family: 'Poppins', sans-serif;
+        font-size: 3rem;
+      font-family: 'Outfit', sans-serif;
       font-weight: 600;
     }
     .types-section h2 span{
@@ -589,11 +598,11 @@
   .comparison-section {
       padding: 60px 10%;
       text-align: center;
+      font-family: 'Outfit', sans-serif;
     }
     .comparison-section h2{
       color: black;
-      font-size: 40px;
-      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
       font-weight: 600;
     }
     .comparison-table {
@@ -638,14 +647,14 @@
     /*Test Section */
     .test-container {
       background-color: #ffe5e5;
-  margin: auto;
-  padding: 2rem;
-  text-align: center;
-  color: black;
+      margin: auto;
+      padding: 2rem;
+      text-align: center;
+      color: black;
+      font-family: 'Outfit', sans-serif;
 }
 .test-container h1{
-  font-size: 40px;
-  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
   font-weight: 600;
   color: black;
 }
@@ -706,6 +715,8 @@
 .card.active {
   display: block;
 }
+
+
 
 .desc {
   color: #666;
@@ -778,6 +789,7 @@
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
     }
+
 @keyframes popIn {
   0% {
     opacity: 0;
@@ -814,10 +826,10 @@
       padding: 60px 10%;
       text-align: center;
       color: black;
+      font-family: 'Outfit', sans-serif;
     }
     .coaching-options h2 {
-      font-size: 40px;
-      font-family: 'Poppins', sans-serif;
+      font-size: 3.5rem;
       font-weight: 600;
       color: black;
     }
@@ -893,7 +905,10 @@
       text-align: center;
       padding: 60px 10%;
       color: black;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Outfit', sans-serif;
+    }
+    .accepted-countries h2{
+      font-size: 3rem;
     }
     .accepted-countries h2 span {
       color: #D70000;
@@ -990,10 +1005,11 @@
       padding: 60px 10%;
       text-align: center;
       margin-top: 40px;
+      font-family: 'Outfit', sans-serif;
     }
     .comparison-section-band h2{
       color: black;
-      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
     }
     .comparison-table-band {
       width: 100%;
@@ -1063,11 +1079,11 @@
       margin: 4rem auto;
       padding: 1rem;
       color: black;
+      font-family: 'Outfit', sans-serif;
     }
 
     .faq-title {
-      font-family: 'Poppins', sans-serif;
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: 600;
       margin-bottom: 2.5rem;
       text-align: center;
@@ -1136,6 +1152,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      border-radius: 10px;
     }
 
     .faq-sidebar p {
