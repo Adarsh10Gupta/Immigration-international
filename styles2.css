@@ -165,8 +165,7 @@
       }
 
       .nav-container {
-        padding-left: 26px;
-        padding-right: 23px;
+        padding: 10px 25px;
       }
     }
 
@@ -821,6 +820,169 @@
   }
 }
 
+/*Start your own way*/
+h2 {
+      text-align: center;
+      font-size: 3rem;
+      color: #1b1f2b;
+      margin-bottom: 10px;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 20px;
+    }
+
+    p.subtitle {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .levels-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 60px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .level-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .level-card:hover {
+      transform: scale(1.05);
+      background: #f0f4ff;
+    }
+
+    .level-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .level-badge {
+      color: white;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .level-title {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: #1b1f2b;
+    }
+
+    .level-desc {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .progress-bar {
+      height: 6px;
+      background: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    /* Level Specific Colors */
+    .a1 { background: #28c76f; }
+    .a2 { background: #1e90ff; }
+    .b1 { background: #ffca28; color: black; }
+    .b2 { background: #ff7f0e; }
+    .c1 { background: #f44336; }
+    .c2 { background: #9c27b0; }
+
+    @media (max-width: 768px){
+      .levels-container{
+        padding: 10px;
+      }
+    }
+
+    /*what you get*/
+    .inclusions-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .inclusions-section h2 {
+      font-size: 36px;
+      color: #1b1f2b;
+      margin-bottom: 20px;
+    }
+
+    .inclusions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .inclusion-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .inclusion-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, #1e3c72, #ff416c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon-circle p{
+      font-size: 20px;
+      color: white;
+      font-weight: 800;
+    }
+
+    .inclusion-title {
+      font-weight: bold;
+      font-size: 18px;
+      color: #1b1f2b;
+      margin-bottom: 8px;
+    }
+
+    .inclusion-desc {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .tagline {
+      font-size: 16px;
+      color: #112e51;
+      margin-top: 40px;
+      font-style: italic;
+    }
 /*Coaching */
  .coaching-options {
       background-color: #ffe5e5;
