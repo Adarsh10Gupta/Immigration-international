@@ -1317,6 +1317,16 @@ h2 {
       justify-content: center;
       border-radius: 10px;
     }
+    .faq-sidebar-ielts {
+      background: linear-gradient(135deg, #f33e3e, #e51d1d);
+      border-radius: var(--radius);
+      color: white;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 10px;
+    }
 
     .faq-sidebar p {
       margin: 1rem 0 2rem;
@@ -1338,6 +1348,22 @@ h2 {
     }
 
     .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+    .contact-btn-ielts {
+      background: #fff;
+      color: #e51d1d;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      text-decoration: none;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .contact-btn-ielts:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     }
@@ -2492,10 +2518,124 @@ h2 {
 }
 
 
+/*----------------FOUNDERS WORDS-----------------------------*/
+      .founder-section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      align-items: center;
+      justify-content: center;
+      min-height: 40vw;
+      background: #004080;
+    }
+
+    .founder-image {
+      flex: 1;
+      min-width: 250px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .founder-image .circle {
+      background-color: #044a95;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .founder-image img {
+      width: 90%;
+      height: 90%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .founder-content {
+      flex: 1;
+      min-width: 300px;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .founder-content h2 {
+      font-size: 2.4rem;
+      color: white;
+      margin-bottom: 50px;
+      font-family: sans-serif;
+    }
+
+    .founder-content p {
+      font-size: 20px;
+      color: white;
+      margin-bottom: 20px;
+      font-family: sans-serif;
+      margin-left: 10px;
+    }
+
+    .founder-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .founder-buttons a {
+      background-color: #e63946;
+      color: #fff;
+      padding: 10px 18px;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: sans-serif;
+    }
+
+    .founder-buttons a:hover {
+      background-color: #c92a38;
+    }
+
+    @media (min-width: 768px) {
+      .founder-section {
+        flex-wrap: nowrap;
+        text-align: left;
+      }
+
+      .founder-content {
+        text-align: left;
+        padding-left: 40px;
+        margin-left: -45px;
+      }
+
+      .founder-buttons {
+        justify-content: flex-start;
+      }
+      .founder-image .circle{
+        width: 400px;
+         height: 400px;
+      }
+      .founder-content h2{
+        font-size: 60px;
+      }
+    }
+
 /*footer*/
 /*============ foooter ====================*/
     footer {
       background: linear-gradient(135deg, rgb(14, 110, 190) 0%, #0d44da 100%);
+      color: #ccc;
+      padding: 40px 20px 20px;
+      font-family: "Segoe UI", sans-serif;
+    }
+     .footer-ielts {
+      background: linear-gradient(135deg, rgb(208, 60, 60) 0%, #da0d0d 100%);
       color: #ccc;
       padding: 40px 20px 20px;
       font-family: "Segoe UI", sans-serif;
