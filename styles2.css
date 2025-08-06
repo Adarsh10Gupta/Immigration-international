@@ -581,6 +581,9 @@
     .academic {
       border: 2px solid #007bff;
     }
+    .academic:hover{
+       box-shadow: 5px 5px 5px #528ecf;
+    }
     .general {
       border: 2px solid #D70000;
     }
@@ -1058,11 +1061,16 @@ h2 {
       justify-content: space-around;
       flex-wrap: wrap;
       margin-top: 30px;
+      gap: 20px;
+    }
+    .included-items img, strong{
+      margin-bottom: 5px;
     }
     .included-items div {
       text-align: center;
       flex: 1;
       min-width: 150px;
+      line-height: 25px;
     }
     .btn-white{
       background-color: white;
