@@ -416,62 +416,68 @@
       </div>
     </div> -->
 
-    <div class="cards-container">
-    <div class="card" data-text="Understand familiar everyday expressions and very basic phrases." data-level="25">
-      <div class="card-content">A1 <br> Beginner</div>
-      <div class="progress-wrapper">
-        <span class="percentage-text">0%</span>
-        <div class="progress-bar-container">
-          <div class="progress-bar"></div>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-text="Understand frequently used expressions related to areas of relevance." data-level="30">
-      <div class="card-content">A2 <br>Elementary</div>
-      <div class="progress-wrapper">
-        <span class="percentage-text">0%</span>
-        <div class="progress-bar-container">
-          <div class="progress-bar"></div>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-text="Can deal with most situations likely to arise while traveling. Can produce simple connected text." data-level="50">
-      <div class="card-content">B1 <br>Intermediate</div>
-      <div class="progress-wrapper">
-        <span class="percentage-text">0%</span>
-        <div class="progress-bar-container">
-          <div class="progress-bar"></div>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-text="Can interact with a degree of fluency and spontaneity without strain." data-level="70">
-      <div class="card-content">B2 <br>Upper Intermediate</div>
-      <div class="progress-wrapper">
-        <span class="percentage-text">0%</span>
-        <div class="progress-bar-container">
-          <div class="progress-bar"></div>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-text="Can express ideas fluently and spontaneously without searching for expressions." data-level="85">
-      <div class="card-content">C1 <br>Advanced</div>
-      <div class="progress-wrapper">
-        <span class="percentage-text">0%</span>
-        <div class="progress-bar-container">
-          <div class="progress-bar"></div>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-text="Can summarize information from different spoken and written sources, reconstructing arguments." data-level="100">
-      <div class="card-content">C2 <br>Proficient</div>
-      <div class="progress-wrapper">
-        <span class="percentage-text">0%</span>
-        <div class="progress-bar-container">
-          <div class="progress-bar"></div>
-        </div>
+    <div class="french-cards-container">
+  <div class="french-card" data-text="Understand familiar everyday expressions and very basic phrases." data-level="25">
+    <div class="french-card-content">A1 <br> Beginner</div>
+    <div class="french-progress-wrapper">
+      <span class="french-percentage-text">0%</span>
+      <div class="french-progress-bar-container">
+        <div class="french-progress-bar"></div>
       </div>
     </div>
   </div>
+
+  <div class="french-card" data-text="Understand frequently used expressions related to areas of relevance." data-level="30">
+    <div class="french-card-content">A2 <br> Elementary</div>
+    <div class="french-progress-wrapper">
+      <span class="french-percentage-text">0%</span>
+      <div class="french-progress-bar-container">
+        <div class="french-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="french-card" data-text="Can deal with most situations likely to arise while traveling. Can produce simple connected text." data-level="50">
+    <div class="french-card-content">B1 <br> Intermediate</div>
+    <div class="french-progress-wrapper">
+      <span class="french-percentage-text">0%</span>
+      <div class="french-progress-bar-container">
+        <div class="french-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="french-card" data-text="Can interact with a degree of fluency and spontaneity without strain." data-level="70">
+    <div class="french-card-content">B2 <br> Upper Intermediate</div>
+    <div class="french-progress-wrapper">
+      <span class="french-percentage-text">0%</span>
+      <div class="french-progress-bar-container">
+        <div class="french-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="french-card" data-text="Can express ideas fluently and spontaneously without searching for expressions." data-level="85">
+    <div class="french-card-content">C1 <br> Advanced</div>
+    <div class="french-progress-wrapper">
+      <span class="french-percentage-text">0%</span>
+      <div class="french-progress-bar-container">
+        <div class="french-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="french-card" data-text="Can summarize information from different spoken and written sources, reconstructing arguments." data-level="100">
+    <div class="french-card-content">C2 <br> Proficient</div>
+    <div class="french-progress-wrapper">
+      <span class="french-percentage-text">0%</span>
+      <div class="french-progress-bar-container">
+        <div class="french-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <div class="tagline">
       "Every class comes with love, support, and accountability!"
@@ -769,42 +775,38 @@ You’re ready for more. The world’s ready for you. And we’re ready to make 
   });
 </script>
 <script>
-    const cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll('.french-card');
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const card = entry.target;
-          const progressBar = card.querySelector('.progress-bar');
-          const percentageText = card.querySelector('.percentage-text');
-          const level = parseInt(card.getAttribute('data-level'));
-          
-          // Animate bar width
-          progressBar.style.width = level + '%';
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const card = entry.target;
+        const progressBar = card.querySelector('.french-progress-bar');
+        const percentageText = card.querySelector('.french-percentage-text');
+        const level = parseInt(card.getAttribute('data-level'));
 
-          // Animate % counting up
-          let current = 0;
-          const interval = setInterval(() => {
-            if (current >= level) {
-              clearInterval(interval);
-            } else {
-              current++;
-              percentageText.textContent = current + '%';
-            }
-          }, 20);
+        progressBar.style.width = level + '%';
 
-          // Fade in text
-          percentageText.style.opacity = 1;
+        let current = 0;
+        const interval = setInterval(() => {
+          if (current >= level) {
+            clearInterval(interval);
+          } else {
+            current++;
+            percentageText.textContent = current + '%';
+          }
+        }, 20);
 
-          // Unobserve after animation
-          observer.unobserve(card);
-        }
-      });
-    }, {
-      threshold: 0.5
+        percentageText.style.opacity = 1;
+        observer.unobserve(card);
+      }
     });
+  }, {
+    threshold: 0.5
+  });
 
-    cards.forEach(card => observer.observe(card));
-  </script>
+  cards.forEach(card => observer.observe(card));
+</script>
+
 
 </html>

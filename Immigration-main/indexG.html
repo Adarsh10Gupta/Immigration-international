@@ -702,6 +702,31 @@ You’re ready for more. The world’s ready for you. And we’re ready to make 
     Need Help?
   </a>
   
+  <!--form modal for book now section-->
+  <!-- Modal Form -->
+<div class="german-modal" id="german-modal">
+  <div class="german-modal-content">
+    <span class="german-close-btn" id="german-close-btn">&times;</span>
+    <h2>Book Your Course</h2>
+    <form id="german-form">
+      <label for="german-course">Course</label>
+      <input type="text" id="german-course" name="course" readonly />
+
+      <label for="german-name">Name</label>
+      <input type="text" id="german-name" name="name" required />
+
+      <label for="german-email">Email</label>
+      <input type="email" id="german-email" name="email" required />
+
+      <label for="german-phone">Phone Number</label>
+      <input type="tel" id="german-phone" name="phone" required />
+
+      <button type="submit" class="german-submit-btn">Submit</button>
+    </form>
+    <div id="formMessage"></div>
+  </div>
+</div>
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -764,6 +789,38 @@ You’re ready for more. The world’s ready for you. And we’re ready to make 
       document.getElementById('formMessage').innerHTML = `<p style="color: red;">Something went wrong!</p>`;
     }
   });
+</script>
+<!--Update form submit handler--> 
+<script>
+document.getElementById("german-form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const course = document.getElementById("german-course").value;
+  const name = document.getElementById("german-name").value;
+  const email = document.getElementById("german-email").value;
+  const phone = document.getElementById("german-phone").value;
+
+  try {
+    const response = await fetch("/send-german-form", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ course, name, email, phone }),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      document.getElementById('formMessage').innerHTML = `<p style="color: green;">Email sent successfully!</p>`;
+        form.reset(); 
+      document.getElementById("german-modal").style.display = "none";
+    } else {
+        document.getElementById('formMessage').innerHTML = `<p style="color: red;">Failed to send email.</p>`;
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    document.getElementById('formMessage').innerHTML = `<p style="color: red;">Something went wrong!</p>`;
+  }
+});
 </script>
 
 </html>

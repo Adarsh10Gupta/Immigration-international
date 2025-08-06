@@ -286,3 +286,42 @@ wrapper.addEventListener('mouseenter', () => {
 wrapper.addEventListener('mouseleave', () => {
   scrollSpeed = 0.5;
 });
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const germanBookBtns = document.querySelectorAll(".gcl-book-btn");
+    const germanModal = document.getElementById("german-modal");
+    const germanCloseBtn = document.getElementById("german-close-btn");
+    const germanCourseInput = document.getElementById("german-course");
+
+    // Open modal with selected course
+    germanBookBtns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const card = btn.closest(".gcl-card");
+        const course = card.querySelector(".gcl-level").textContent.trim();
+        germanCourseInput.value = course;
+        germanModal.style.display = "block";
+      });
+    });
+
+    // Close modal
+    germanCloseBtn.addEventListener("click", () => {
+      germanModal.style.display = "none";
+    });
+
+    // Close modal on outside click
+    window.addEventListener("click", e => {
+      if (e.target === germanModal) {
+        germanModal.style.display = "none";
+      }
+    });
+
+    // Optional: Handle form submit
+    document.getElementById("german-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      this.reset();
+      germanModal.style.display = "none";
+    });
+  });
+

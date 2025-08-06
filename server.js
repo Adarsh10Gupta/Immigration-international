@@ -326,6 +326,45 @@ app.post('/send-contactUs', async (req, res) => {
     res.status(500).json({ success: false, message: 'Email sending failed.' });
   }
 });
+
+//German Book Now form
+// POST route for form
+app.post("/send-german-form", async (req, res) => {
+  const { course, name, email, phone } = req.body;
+
+  if (!course || !name || !email || !phone) {
+    return res.status(400).json({ success: false, message: "All fields are required." });
+  }
+
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail", // or use custom SMTP
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: process.env.RECEIVER_EMAIL,
+      subject: `New German Course Booking - ${course}`,
+      html: `
+        <h3>Course: ${course}</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+      `,
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    res.status(200).json({ success: true, message: 'Email sent successfully!' });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res.status(500).json({ success: false, message: 'Email sending failed.' });
+  }
+});
 //ielts demo page form
 app.post('/send-ielts', async (req, res) => {
   const { name, email, phoneNumber } = req.body;

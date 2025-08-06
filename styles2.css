@@ -2538,132 +2538,133 @@ h2 {
 }
 
 /*----------------------------------new cards features set for start small section---------------------------------*/
-.cards-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-      justify-content: center;
-      margin-top: 20px;
-    }
+.french-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 20px;
+}
 
-    .card {
-      position: relative;
-      width: 350px;
-      height: 250px;
-      background: linear-gradient(145deg, rgb(25, 107, 206), rgb(32, 146, 178));
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 36px;
-      font-weight: bold;
-      color: white;
-      border-radius: 20px;
-      cursor: pointer;
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-    }
+.french-card {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  background: linear-gradient(145deg, rgb(25, 107, 206), rgb(32, 146, 178));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
 
-    .card:hover {
-      transform: translateY(-8px);
-    }
+.french-card:hover {
+  transform: translateY(-8px);
+}
 
-    .card::before,
-    .card::after {
-      position: absolute;
-      width: 20%;
-      height: 20%;
-      background-color: rgba(255, 255, 255, 0.6);
-      transition: all 0.5s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-      color: black;
-      box-sizing: border-box;
-      z-index: 1;
-    }
+.french-card::before,
+.french-card::after {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: black;
+  box-sizing: border-box;
+  z-index: 1;
+}
 
-    .card::before {
-      top: 0;
-      right: 0;
-      border-radius: 0 20px 0 100%;
-      content: "";
-    }
+.french-card::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 20px 0 100%;
+  content: "";
+}
 
-    .card::after {
-      bottom: 0;
-      left: 0;
-      border-radius: 0 100% 0 20px;
-      font-size: 18px;
-      content: "";
-      line-height: 1.4;
-      padding: 20px;
-    }
+.french-card::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100% 0 20px;
+  font-size: 18px;
+  content: "";
+  line-height: 1.4;
+  padding: 20px;
+}
 
-    .card:hover::before,
-    .card:hover::after {
-      width: 100%;
-      height: 100%;
-      border-radius: 20px;
-      background-color: white;
-    }
+.french-card:hover::before,
+.french-card:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: white;
+}
 
-    .card:hover::after {
-      content: attr(data-text);
-      font-size: 20px;
-      color: #333;
-      padding: 20px;
-    }
+.french-card:hover::after {
+  content: attr(data-text);
+  font-size: 20px;
+  color: #333;
+  padding: 20px;
+}
 
-    .card-content {
-      z-index: 2;
-      transition: opacity 0.3s ease;
-      text-align: center;
-      padding: 10px;
-    }
+.french-card-content {
+  z-index: 2;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 10px;
+}
 
-    .card:hover .card-content,
-    .card:hover .progress-wrapper {
-      opacity: 0;
-    }
+.french-card:hover .french-card-content,
+.french-card:hover .french-progress-wrapper {
+  opacity: 0;
+}
 
-    .progress-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      z-index: 2;
-      transition: opacity 0.3s ease;
-      margin-top: 20px;
-    }
+.french-progress-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+  margin-top: 20px;
+}
 
-    .percentage-text {
-      font-size: 16px;
-      font-weight: bold;
-      color: #fff;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
+.french-percentage-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 
-    .progress-bar-container {
-      width: 160px;
-      height: 18px;
-      background-color: rgba(255, 255, 255, 0.3);
-      border-radius: 10px;
-      overflow: hidden;
-    }
+.french-progress-bar-container {
+  width: 160px;
+  height: 18px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-    .progress-bar {
-      height: 100%;
-      background-color: white;
-      width: 0%;
-      border-radius: 1px;
-      transition: width 2s ease;
-    }
+.french-progress-bar {
+  height: 100%;
+  background-color: white;
+  width: 0%;
+  border-radius: 1px;
+  transition: width 2s ease;
+}
+
 
 
 /*----------------FOUNDERS WORDS-----------------------------*/
