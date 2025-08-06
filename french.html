@@ -66,22 +66,22 @@
     <h2 class="french-benefits-title">Why Learn French?</h2>
     <div class="french-benefits-grid">
       <div class="french-benefit-card">
-        <div class="french-icon"><img src="assets/french/worldwide.png" alt=""></div>
+        <div class="french-icon"><img src="assets/french/emerging-industries-unscreen.gif" alt=""></div>
         <h3>Spoken in 29 countries worldwide</h3>
         <p>Connect with over 280 million French speakers globally</p>
       </div>
       <div class="french-benefit-card">
-        <div class="french-icon"><img src="assets/french/graduate.png" alt=""></div>
+        <div class="french-icon"><img src="assets/french/graduate-unscreen.gif" alt=""></div>
         <h3>Required for study in France & Canada</h3>
         <p>Essential for universities and immigration programs</p>
       </div>
       <div class="french-benefit-card">
-        <div class="french-icon"><img src="assets/french/suitcase.png" alt=""></div>
+        <div class="french-icon"><img src="assets/french/job-seeking-unscreen.gif" alt=""></div>
         <h3>Opens doors to MNCs and government jobs</h3>
         <p>Enhance your career prospects significantly</p>
       </div>
       <div class="french-benefit-card">
-        <div class="french-icon"><img src="assets/french/brain.png" alt=""></div>
+        <div class="french-icon"><img src="assets/french/opportunities-unscreen.gif" alt=""></div>
         <h3>Boosts cognitive skills and confidence</h3>
         <p>Improve memory, multitasking, and mental flexibility</p>
       </div>
@@ -378,7 +378,7 @@
     <h2>Start Small, Master Every Level</h2>
     <p>Learn at Your Own Pace</p>
 
-    <div class="inclusions-grid">
+    <!-- <div class="inclusions-grid">
       <div class="inclusion-card">
         <div class="icon-circle"><p>A1</p></div>
         <div class="inclusion-title">Beginner</div>
@@ -414,7 +414,64 @@
         <div class="inclusion-title">Proficient</div>
         <div class="inclusion-desc">Can summarize information from different spoken and written sources, reconstructing arguments.</div>
       </div>
+    </div> -->
+
+    <div class="cards-container">
+    <div class="card" data-text="Understand familiar everyday expressions and very basic phrases." data-level="25">
+      <div class="card-content">A1 <br> Beginner</div>
+      <div class="progress-wrapper">
+        <span class="percentage-text">0%</span>
+        <div class="progress-bar-container">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
     </div>
+    <div class="card" data-text="Understand frequently used expressions related to areas of relevance." data-level="30">
+      <div class="card-content">A2 <br>Elementary</div>
+      <div class="progress-wrapper">
+        <span class="percentage-text">0%</span>
+        <div class="progress-bar-container">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" data-text="Can deal with most situations likely to arise while traveling. Can produce simple connected text." data-level="50">
+      <div class="card-content">B1 <br>Intermediate</div>
+      <div class="progress-wrapper">
+        <span class="percentage-text">0%</span>
+        <div class="progress-bar-container">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" data-text="Can interact with a degree of fluency and spontaneity without strain." data-level="70">
+      <div class="card-content">B2 <br>Upper Intermediate</div>
+      <div class="progress-wrapper">
+        <span class="percentage-text">0%</span>
+        <div class="progress-bar-container">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" data-text="Can express ideas fluently and spontaneously without searching for expressions." data-level="85">
+      <div class="card-content">C1 <br>Advanced</div>
+      <div class="progress-wrapper">
+        <span class="percentage-text">0%</span>
+        <div class="progress-bar-container">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" data-text="Can summarize information from different spoken and written sources, reconstructing arguments." data-level="100">
+      <div class="card-content">C2 <br>Proficient</div>
+      <div class="progress-wrapper">
+        <span class="percentage-text">0%</span>
+        <div class="progress-bar-container">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <div class="tagline">
       "Every class comes with love, support, and accountability!"
@@ -711,5 +768,43 @@ You’re ready for more. The world’s ready for you. And we’re ready to make 
     }
   });
 </script>
+<script>
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const card = entry.target;
+          const progressBar = card.querySelector('.progress-bar');
+          const percentageText = card.querySelector('.percentage-text');
+          const level = parseInt(card.getAttribute('data-level'));
+          
+          // Animate bar width
+          progressBar.style.width = level + '%';
+
+          // Animate % counting up
+          let current = 0;
+          const interval = setInterval(() => {
+            if (current >= level) {
+              clearInterval(interval);
+            } else {
+              current++;
+              percentageText.textContent = current + '%';
+            }
+          }, 20);
+
+          // Fade in text
+          percentageText.style.opacity = 1;
+
+          // Unobserve after animation
+          observer.unobserve(card);
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
 
 </html>
