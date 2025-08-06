@@ -492,6 +492,7 @@
     .purpose-highlight {
       font-weight: 600;
       color: #D70000;
+      margin: 15px 0px;
     }
     .purpose-stats {
       margin-top: 60px;
@@ -529,6 +530,7 @@
         font-size: 3rem;
       font-family: 'Outfit', sans-serif;
       font-weight: 600;
+      margin-bottom: 10px
     }
     .types-section h2 span{
         color: #D70000;
@@ -558,11 +560,18 @@
     }
     .type-card h3 {
       margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .type-card p{
+      margin-bottom: 20px;
     }
     .type-card ul {
       text-align: left;
       padding-left: 20px;
       margin-top: 30px;
+    }
+    .type-card ul li{
+      line-height: 30px;
     }
     .type-note {
       margin-top: 30px;
@@ -684,6 +693,9 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: bold;
+  color: red;
+}
+.tab img{
   color: red;
 }
 
@@ -813,6 +825,7 @@
   }
   .card{
     justify-self: center;
+            margin-left: -15px
   }
   .testday-text{
     flex-direction: column;
@@ -1146,6 +1159,7 @@ h2 {
       display: flex;
       justify-self:center;
       gap: 30px;
+      margin-top: 15px;
     }
     .popular-countries span{
       transition: 0.5s ease;
@@ -2705,6 +2719,31 @@ h2 {
 
     .footer-socials a:hover {
       background-color: rgb(14, 255, 190);
+      color: rgb(14, 110, 190);
+    }
+    /*ielts-footer*/
+    .footer-socials-ielts {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .footer-socials-ielts a {
+      background-color: white;
+      color: #c00;
+      font-size: 14px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .footer-socials-ielts a:hover {
+      transform: scale(1.2px);
       color: rgb(14, 110, 190);
     }
 
