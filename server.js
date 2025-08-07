@@ -55,11 +55,11 @@ app.get('/login', (req, res) => {
 
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
-  if (username === 'admin' && password === 'admin123') {
+  if (username === process.env.ADMIN_USERNAME && password === process.env.ADMIN_PASSWORD) {
     req.session.user = username;
     return res.redirect('/dashboard');
   }
-  res.send('Invalid credentials');
+  res.redirect('/login');
 });
 
 app.get('/logout', (req, res) => {
