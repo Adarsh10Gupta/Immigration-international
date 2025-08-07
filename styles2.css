@@ -837,7 +837,7 @@
 }
 
 /*Start your own way*/
-h2 {
+/* h2 {
       text-align: center;
       font-size: 3rem;
       color: #1b1f2b;
@@ -919,7 +919,7 @@ h2 {
     }
 
     /* Level Specific Colors */
-    .a1 { background: #28c76f; }
+    /* .a1 { background: #28c76f; }
     .a2 { background: #1e90ff; }
     .b1 { background: #ffca28; color: black; }
     .b2 { background: #ff7f0e; }
@@ -930,7 +930,7 @@ h2 {
       .levels-container{
         padding: 10px;
       }
-    }
+    } */ 
 
     /*what you get*/
     .inclusions-section {
@@ -1764,7 +1764,16 @@ h2 {
     align-items: center;
   }
   .french-btn{
-    width: 100%;
+    width: 85%;
+  }
+  .french-btn img{
+    width: 30px;
+  }
+  .french-btn-primary{
+    font-weight: 700;
+  }
+  .french-btn-secondary{
+    font-weight: 700;
   }
 }
 
