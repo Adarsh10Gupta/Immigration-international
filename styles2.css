@@ -223,6 +223,10 @@
     .btn-red {
       color: #9b0202;
     }
+    .btn-red a{
+      color: #9b0202;
+      text-decoration: none;
+    }
     .btn-white {
       background-color: transparent;
       box-shadow: 5px 5px 5px #761818;
@@ -233,6 +237,9 @@
       background-color: #d30303;
       box-shadow: 5px 5px 5px #761818;
         transform: scale(1.1);
+    }
+    .btn-red:hover a{
+      color: white;
     }
     .btn-white:hover{
         transform: scale(1.1);
