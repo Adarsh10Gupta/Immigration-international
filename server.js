@@ -477,6 +477,43 @@ app.post('/send-ieltsCoaching', async (req, res) => {
   }
 });
 
+//TOEFL PAGE FORM
+app.post('/send-contactFormToefl', async (req, res) => {
+  const {name, email, message, phone } = req.body;
+
+  const output = `
+    <h3>TOEFL Contact Us Enquiry!</h3>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Phone Number:</strong> ${phone}</p>
+    <p><strong>Message:</strong> ${message || 'None'}</p>
+  `;
+
+  try {
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    const mailOptions = {
+      from: `"Toefl Page Enquiry" <${process.env.EMAIL_USER}>`,
+      to: process.env.RECEIVER_EMAIL,
+      subject: 'Toefl Page enquiry',
+      html: output,
+    };
+
+    await transporter.sendMail(mailOptions);
+    console.log('✅ indexG Email sent!');
+    res.status(200).send('Email sent');
+  } catch (error) {
+    console.error('❌ Error sending indexG email:', error);
+    res.status(500).send('Error sending email. Please try again later.');
+  }
+});
+
 
 // ✅ Start server once
 app.listen(PORT, () => {
