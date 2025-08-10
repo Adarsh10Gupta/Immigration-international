@@ -211,35 +211,35 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ===============================
      Cource-Type Button Ripple + Processing
   =============================== */
-  const courceButtons = document.querySelectorAll('.Cource-Type-btn');
-  courceButtons.forEach(button => {
-    button.addEventListener('click', function(e) {
-      if (this.classList.contains('processing')) return;
-      this.classList.add('processing');
+  // const courceButtons = document.querySelectorAll('.Cource-Type-btn');
+  // courceButtons.forEach(button => {
+  //   button.addEventListener('click', function(e) {
+  //     if (this.classList.contains('processing')) return;
+  //     this.classList.add('processing');
 
-      const ripple = document.createElement('span');
-      ripple.className = 'ripple';
-      this.appendChild(ripple);
+  //     const ripple = document.createElement('span');
+  //     ripple.className = 'ripple';
+  //     this.appendChild(ripple);
 
-      const rect = this.getBoundingClientRect();
-      ripple.style.left = `${e.clientX - rect.left}px`;
-      ripple.style.top = `${e.clientY - rect.top}px`;
+  //     const rect = this.getBoundingClientRect();
+  //     ripple.style.left = `${e.clientX - rect.left}px`;
+  //     ripple.style.top = `${e.clientY - rect.top}px`;
 
-      const originalHTML = this.innerHTML;
-      this.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Processing...`;
+  //     const originalHTML = this.innerHTML;
+  //     this.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Processing...`;
 
-      setTimeout(() => {
-        this.innerHTML = `<i class="fas fa-check"></i> Success!`;
-        this.style.background = 'linear-gradient(to right, #10b981, #34d399)';
-        setTimeout(() => {
-          this.innerHTML = originalHTML;
-          this.style.background = '';
-          this.classList.remove('processing');
-          ripple.remove();
-        }, 2000);
-      }, 1500);
-    });
-  });
+  //     setTimeout(() => {
+  //       this.innerHTML = `<i class="fas fa-check"></i> Success!`;
+  //       this.style.background = 'linear-gradient(to right, #10b981, #34d399)';
+  //       setTimeout(() => {
+  //         this.innerHTML = originalHTML;
+  //         this.style.background = '';
+  //         this.classList.remove('processing');
+  //         ripple.remove();
+  //       }, 2000);
+  //     }, 1500);
+  //   });
+  // });
 
   /* ===============================
      Filter Functionality for English Test Table
