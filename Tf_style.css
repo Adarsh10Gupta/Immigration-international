@@ -1800,6 +1800,15 @@ body{
                 bottom: 0rem;
                 right: 0rem;
             }
+            .englist-test-hed{
+              font-size: 2rem;
+            }
+            .Cource-Type-title{
+              font-size: 2rem;
+            }
+            .offer-hed{
+              font-size: 2rem;
+            }
         }
 
         /* Animations */
