@@ -430,3 +430,36 @@ document.addEventListener('DOMContentLoaded', function () {
   }, 100);
 
 });
+
+
+// ====== NAVBAR ======
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const dropdowns = document.querySelectorAll(".dropdown");
+
+    dropdowns.forEach(dropdown => {
+        const selected = dropdown.querySelector(".selected");
+
+        selected.addEventListener("click", (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropdown.classList.toggle("active");
+            }
+        });
+    });
+
+    document.addEventListener("click", (e) => {
+        if (window.innerWidth <= 768) {
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove("active");
+                }
+            });
+
+            if (!e.target.closest(".nav-container") && menuToggle.checked) {
+                menuToggle.checked = false;
+                navLinks.style.display = "none";
+            }
+        }
+    });
