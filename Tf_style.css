@@ -590,7 +590,7 @@ body{
     text-align: center;
     color: white;
     font-weight: 700;
-    
+    padding-top: 40px;
 }
 .toefl-offer-section-wrapper{
     background: linear-gradient(38deg, #053F6A, #043357);
